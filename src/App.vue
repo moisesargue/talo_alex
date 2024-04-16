@@ -326,7 +326,7 @@ function cam() {
 }
 
 function camgeneral() {
-  mj.value=true
+ 
   inicio.value = true;
   let expresionvalor = /^\d+(\.\d{1,2})?$/;
   let verifivalor = expresionvalor.test(valor.value);
@@ -366,6 +366,7 @@ function camgeneral() {
       pintar.value = "";
     }, 3000);
   } else {
+    mj.value=true
     for (let i = 0; i <= 99; i++) {
       conjunto.value[i].valor = valor.value;
       conjunto.value[i].premio = premio.value;
