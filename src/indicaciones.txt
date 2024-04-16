@@ -1,0 +1,61 @@
+cambiar en temas 
+
+°fondo 
+°color letras
+°color bordes
+°color botones 
+°color nuemeros (opcional dependiendo de como se vea los base)
+
+
+clasico 
+azul 
+naranja
+dark
+
+
+<script setup>
+import { ref } from "vue"
+
+let fondo = ref("")
+let letra_color = ref("")
+let boton = ref("")
+
+
+</script>
+
+
+<template>
+
+<div class="temas">
+
+
+                <div class="tema clasico" @click="clasico()">
+                  <p>Clasico formal</p>
+                </div>
+
+                <div class="tema azul" @click="azul()">
+                  <p>Azul cálido</p>
+                </div>
+
+                <div class="tema naranja" @click="naranja()">
+                  <p>Fuego calido</p>
+                </div>
+
+                <div class="tema dark" @click="dark()">
+                  <p>Noche Infinita</p>
+                </div>
+
+ </div>
+
+</template>
+
+
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  :style="{ backgroundColor: fondo }"
+}
+
+</style>
